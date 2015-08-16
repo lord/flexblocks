@@ -1,0 +1,178 @@
+:root {
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: 4rem;
+}
+
+/* CORE */
+/* Always use this */
+.z {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* TYPES */
+/* Always use exactly one of these */
+.z-col {
+  flex-direction: column;
+}
+.z-row {
+  flex-direction: row;
+}
+.z-cols {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.z-rows {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* ALIGNMENT */
+/* Use at most one vertical and one horizontal */
+.z-col.z-top,
+.z-cols.z-top,
+.z-row.z-left,
+.z-rows.z-left {
+  justify-content: flex-start;
+}
+
+.z-col.z-bottom,
+.z-cols.z-bottom,
+.z-row.z-right,
+.z-rows.z-right {
+  justify-content: flex-end;
+}
+
+.z-col.z-middle,
+.z-cols.z-middle,
+.z-row.z-center,
+.z-rows.z-center {
+  justify-content: center;
+}
+
+/* This overrides the children values, so don't use if you want
+to specify specific values for the children. */
+.z-col.z-vstretch>.z,
+.z-cols.z-vstretch>.z,
+.z-row.z-stretch>.z,
+.z-rows.z-stretch>.z {
+  flex: 1 0 auto;
+}
+
+.z-col.z-vjustify,
+.z-cols.z-vjustify,
+.z-row.z-justify,
+.z-rows.z-justify {
+  justify-content: space-between;
+}
+
+.z-col.z-left,
+.z-row.z-top {
+  align-items: flex-start;
+}
+
+.z-col.z-right,
+.z-row.z-bottom {
+  align-items: flex-end;
+}
+
+.z-col.z-center,
+.z-row.z-middle {
+  align-items: center;
+}
+
+/* spread and stretch do the same in the cross-axis
+for non grid elements. also in grids, children are always
+stretched */
+.z-col.z-stretch,
+.z-row.z-vstretch,
+.z-col.z-justify,
+.z-row.z-vjustify,
+.z-cols,
+.z-rows {
+  align-items: stretch;
+}
+
+.z-cols.z-left,
+.z-rows.z-top {
+  align-content: flex-start;
+}
+
+.z-cols.z-right,
+.z-rows.z-bottom {
+  align-content: flex-end;
+}
+
+.z-cols.z-center,
+.z-rows.z-middle {
+  align-content: center;
+}
+
+.z-cols.z-justify,
+.z-rows.z-vjustify {
+  align-content: space-between;
+}
+
+.z-cols.z-stretch,
+.z-rows.z-vstretch {
+  align-content: stretch;
+}
+
+/* MARGIN PROPERTIES */
+/* spaces children a certain amount away from each other */
+/* TODO does not currently work with .z-rows or .z-cols */
+.z-vmargin-1>.z {
+  margin-top: var(--space-1);
+}
+.z-vmargin-2>.z {
+  margin-top: var(--space-2);
+}
+.z-vmargin-3>.z {
+  margin-top: var(--space-3);
+}
+.z-vmargin-4>.z {
+  margin-top: var(--space-4);
+}
+.z-margin-1>.z {
+  margin-left: var(--space-1);
+}
+.z-margin-2>.z {
+  margin-left: var(--space-2);
+}
+.z-margin-3>.z {
+  margin-left: var(--space-3);
+}
+.z-margin-4>.z {
+  margin-left: var(--space-4);
+}
+.z-row>.z:first-child, .z-col>.z:first-child {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+/* CHILD PROPERTIES */
+/* fill makes flexbox ignore the content size of this el and just be that portion of
+the remaining space */
+.z-auto, .z-fill-1 { flex: 1 0 0; }
+.z-fill-2 { flex: 2 0 0; }
+.z-fill-3 { flex: 3 0 0; }
+.z-fill-4 { flex: 4 0 0; }
+
+/* stretch makes flexbox fill everything out normally, and then stretch
+these elements proportionally to fill the remaining space. This means two 
+stretch-1s could have different widths. You probably want fill instead */
+.z-stretch-1 { flex: 1 0 auto; }
+.z-stretch-2 { flex: 2 0 auto; }
+.z-stretch-3 { flex: 3 0 auto; }
+.z-stretch-4 { flex: 4 0 auto; }
+
+
+/* SPECIAL */
+.z-page {
+  min-height: 100vh;
+}
