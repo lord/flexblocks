@@ -1,177 +1,175 @@
-$space-1: 0.5rem;
-$space-2: 1rem;
-$space-3: 2rem;
-$space-4: 4rem;
-$p: z; // the prefix of the library
+@mixin define-flexblocks($p, $space-1, $space-2, $space-3, $space-4) {
+  // CORE
+  // Always use this
+  .#{$p} {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+  }
 
-// CORE
-// Always use this
-.#{$p} {
-  display: flex;
-  margin: 0;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
-}
+  // TYPES
+  // Always use exactly one of these
+  .#{$p}-col {
+    flex-direction: column;
+  }
+  .#{$p}-row {
+    flex-direction: row;
+  }
+  .#{$p}-cols {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .#{$p}-rows {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-// TYPES
-// Always use exactly one of these
-.#{$p}-col {
-  flex-direction: column;
-}
-.#{$p}-row {
-  flex-direction: row;
-}
-.#{$p}-cols {
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-.#{$p}-rows {
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+  // ALIGNMENT
+  // Use at most one vertical and one horizontal
+  .#{$p}-col.#{$p}-top,
+  .#{$p}-cols.#{$p}-top,
+  .#{$p}-row.#{$p}-left,
+  .#{$p}-rows.#{$p}-left {
+    justify-content: flex-start;
+  }
 
-// ALIGNMENT
-// Use at most one vertical and one horizontal
-.#{$p}-col.#{$p}-top,
-.#{$p}-cols.#{$p}-top,
-.#{$p}-row.#{$p}-left,
-.#{$p}-rows.#{$p}-left {
-  justify-content: flex-start;
-}
+  .#{$p}-col.#{$p}-bottom,
+  .#{$p}-cols.#{$p}-bottom,
+  .#{$p}-row.#{$p}-right,
+  .#{$p}-rows.#{$p}-right {
+    justify-content: flex-end;
+  }
 
-.#{$p}-col.#{$p}-bottom,
-.#{$p}-cols.#{$p}-bottom,
-.#{$p}-row.#{$p}-right,
-.#{$p}-rows.#{$p}-right {
-  justify-content: flex-end;
-}
+  .#{$p}-col.#{$p}-middle,
+  .#{$p}-cols.#{$p}-middle,
+  .#{$p}-row.#{$p}-center,
+  .#{$p}-rows.#{$p}-center {
+    justify-content: center;
+  }
 
-.#{$p}-col.#{$p}-middle,
-.#{$p}-cols.#{$p}-middle,
-.#{$p}-row.#{$p}-center,
-.#{$p}-rows.#{$p}-center {
-  justify-content: center;
-}
+  // This overrides the children values, so don't use if you want
+  // to specify specific values for the children.
+  .#{$p}-col.#{$p}-vstretch>.#{$p},
+  .#{$p}-cols.#{$p}-vstretch>.#{$p},
+  .#{$p}-row.#{$p}-stretch>.#{$p},
+  .#{$p}-rows.#{$p}-stretch>.#{$p} {
+    flex: 1 0 auto;
+  }
 
-// This overrides the children values, so don't use if you want
-// to specify specific values for the children.
-.#{$p}-col.#{$p}-vstretch>.#{$p},
-.#{$p}-cols.#{$p}-vstretch>.#{$p},
-.#{$p}-row.#{$p}-stretch>.#{$p},
-.#{$p}-rows.#{$p}-stretch>.#{$p} {
-  flex: 1 0 auto;
-}
+  .#{$p}-col.#{$p}-vjustify,
+  .#{$p}-cols.#{$p}-vjustify,
+  .#{$p}-row.#{$p}-justify,
+  .#{$p}-rows.#{$p}-justify {
+    justify-content: space-between;
+  }
 
-.#{$p}-col.#{$p}-vjustify,
-.#{$p}-cols.#{$p}-vjustify,
-.#{$p}-row.#{$p}-justify,
-.#{$p}-rows.#{$p}-justify {
-  justify-content: space-between;
-}
+  .#{$p}-col.#{$p}-left,
+  .#{$p}-row.#{$p}-top {
+    align-items: flex-start;
+  }
 
-.#{$p}-col.#{$p}-left,
-.#{$p}-row.#{$p}-top {
-  align-items: flex-start;
-}
+  .#{$p}-col.#{$p}-right,
+  .#{$p}-row.#{$p}-bottom {
+    align-items: flex-end;
+  }
 
-.#{$p}-col.#{$p}-right,
-.#{$p}-row.#{$p}-bottom {
-  align-items: flex-end;
-}
+  .#{$p}-col.#{$p}-center,
+  .#{$p}-row.#{$p}-middle {
+    align-items: center;
+  }
 
-.#{$p}-col.#{$p}-center,
-.#{$p}-row.#{$p}-middle {
-  align-items: center;
-}
+  // spread and stretch do the same in the cross-axis
+  // for non grid elements. also in grids, children are always
+  // stretched
+  .#{$p}-col.#{$p}-stretch,
+  .#{$p}-row.#{$p}-vstretch,
+  .#{$p}-col.#{$p}-justify,
+  .#{$p}-row.#{$p}-vjustify,
+  .#{$p}-cols,
+  .#{$p}-rows {
+    align-items: stretch;
+  }
 
-// spread and stretch do the same in the cross-axis
-// for non grid elements. also in grids, children are always
-// stretched
-.#{$p}-col.#{$p}-stretch,
-.#{$p}-row.#{$p}-vstretch,
-.#{$p}-col.#{$p}-justify,
-.#{$p}-row.#{$p}-vjustify,
-.#{$p}-cols,
-.#{$p}-rows {
-  align-items: stretch;
-}
+  .#{$p}-cols.#{$p}-left,
+  .#{$p}-rows.#{$p}-top {
+    align-content: flex-start;
+  }
 
-.#{$p}-cols.#{$p}-left,
-.#{$p}-rows.#{$p}-top {
-  align-content: flex-start;
-}
+  .#{$p}-cols.#{$p}-right,
+  .#{$p}-rows.#{$p}-bottom {
+    align-content: flex-end;
+  }
 
-.#{$p}-cols.#{$p}-right,
-.#{$p}-rows.#{$p}-bottom {
-  align-content: flex-end;
-}
+  .#{$p}-cols.#{$p}-center,
+  .#{$p}-rows.#{$p}-middle {
+    align-content: center;
+  }
 
-.#{$p}-cols.#{$p}-center,
-.#{$p}-rows.#{$p}-middle {
-  align-content: center;
-}
+  .#{$p}-cols.#{$p}-justify,
+  .#{$p}-rows.#{$p}-vjustify {
+    align-content: space-between;
+  }
 
-.#{$p}-cols.#{$p}-justify,
-.#{$p}-rows.#{$p}-vjustify {
-  align-content: space-between;
-}
+  .#{$p}-cols.#{$p}-stretch,
+  .#{$p}-rows.#{$p}-vstretch {
+    align-content: stretch;
+  }
 
-.#{$p}-cols.#{$p}-stretch,
-.#{$p}-rows.#{$p}-vstretch {
-  align-content: stretch;
-}
+  // MARGIN PROPERTIES
+  // spaces children a certain amount away from each other
+  // TODO does not currently work with .#{$p}-rows or .#{$p}-cols
+  .#{$p}-vmargin-1>.#{$p} {
+    margin-top: $space-1;
+  }
+  .#{$p}-vmargin-2>.#{$p} {
+    margin-top: $space-2;
+  }
+  .#{$p}-vmargin-3>.#{$p} {
+    margin-top: $space-3;
+  }
+  .#{$p}-vmargin-4>.#{$p} {
+    margin-top: $space-4;
+  }
+  .#{$p}-margin-1>.#{$p} {
+    margin-left: $space-1;
+  }
+  .#{$p}-margin-2>.#{$p} {
+    margin-left: $space-2;
+  }
+  .#{$p}-margin-3>.#{$p} {
+    margin-left: $space-3;
+  }
+  .#{$p}-margin-4>.#{$p} {
+    margin-left: $space-4;
+  }
+  .#{$p}-row>.#{$p}:first-child, .#{$p}-col>.#{$p}:first-child {
+    margin-top: 0;
+    margin-left: 0;
+  }
 
-// MARGIN PROPERTIES
-// spaces children a certain amount away from each other
-// TODO does not currently work with .#{$p}-rows or .#{$p}-cols
-.#{$p}-vmargin-1>.#{$p} {
-  margin-top: $space-1;
-}
-.#{$p}-vmargin-2>.#{$p} {
-  margin-top: $space-2;
-}
-.#{$p}-vmargin-3>.#{$p} {
-  margin-top: $space-3;
-}
-.#{$p}-vmargin-4>.#{$p} {
-  margin-top: $space-4;
-}
-.#{$p}-margin-1>.#{$p} {
-  margin-left: $space-1;
-}
-.#{$p}-margin-2>.#{$p} {
-  margin-left: $space-2;
-}
-.#{$p}-margin-3>.#{$p} {
-  margin-left: $space-3;
-}
-.#{$p}-margin-4>.#{$p} {
-  margin-left: $space-4;
-}
-.#{$p}-row>.#{$p}:first-child, .#{$p}-col>.#{$p}:first-child {
-  margin-top: 0;
-  margin-left: 0;
-}
+  // CHILD PROPERTIES
+  // fill makes flexbox ignore the content size of this el and just be that portion of
+  // the remaining space
+  .#{$p}-auto, .#{$p}-fill-1 { flex: 1 0 0; }
+  .#{$p}-fill-2 { flex: 2 0 0; }
+  .#{$p}-fill-3 { flex: 3 0 0; }
+  .#{$p}-fill-4 { flex: 4 0 0; }
 
-// CHILD PROPERTIES
-// fill makes flexbox ignore the content size of this el and just be that portion of
-// the remaining space
-.#{$p}-auto, .#{$p}-fill-1 { flex: 1 0 0; }
-.#{$p}-fill-2 { flex: 2 0 0; }
-.#{$p}-fill-3 { flex: 3 0 0; }
-.#{$p}-fill-4 { flex: 4 0 0; }
-
-// stretch makes flexbox fill everything out normally, and then stretch
-// these elements proportionally to fill the remaining space. This means two
-// stretch-1s could have different widths. You probably want fill instead
-.#{$p}-stretch-1 { flex: 1 0 auto; }
-.#{$p}-stretch-2 { flex: 2 0 auto; }
-.#{$p}-stretch-3 { flex: 3 0 auto; }
-.#{$p}-stretch-4 { flex: 4 0 auto; }
+  // stretch makes flexbox fill everything out normally, and then stretch
+  // these elements proportionally to fill the remaining space. This means two
+  // stretch-1s could have different widths. You probably want fill instead
+  .#{$p}-stretch-1 { flex: 1 0 auto; }
+  .#{$p}-stretch-2 { flex: 2 0 auto; }
+  .#{$p}-stretch-3 { flex: 3 0 auto; }
+  .#{$p}-stretch-4 { flex: 4 0 auto; }
 
 
-// SPECIAL
-.#{$p}-page {
-  min-height: 100vh;
+  // SPECIAL
+  .#{$p}-page {
+    min-height: 100vh;
+  }
 }
+
+@include define-flexblocks(z, 0.5rem, 1rem, 2rem, 4rem);
