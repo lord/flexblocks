@@ -4,7 +4,7 @@
   "description": "CSS layout library",
   "scripts": {
     "build": "node-sass src/ -o dist/ --source-map dist --output-style expanded",
-    "test": "npm run build && [[ $(git status dist --porcelain 2>/dev/null) == \"\" ]]"
+    "test": "npm run build && bash -c '[[ $(git status ./dist --porcelain 2>/dev/null) == \"\" ]]'"
   },
   "repository": {
     "type": "git",
