@@ -1,7 +1,7 @@
-@mixin define-flexblocks($p, $space-1, $space-2, $space-3, $space-4) {
+@mixin define-flexblocks($p, $spaces) {
   // CORE
   // Always use this
-  .#{$p} {
+  .#{$p}-col, .#{$p}-row, .#{$p}-cols, .#{$p}-rows {
     display: flex;
     margin: 0;
     flex-direction: column;
@@ -51,10 +51,10 @@
 
   // This overrides the children values, so don't use if you want
   // to specify specific values for the children.
-  .#{$p}-col.#{$p}-vstretch>.#{$p},
-  .#{$p}-cols.#{$p}-vstretch>.#{$p},
-  .#{$p}-row.#{$p}-stretch>.#{$p},
-  .#{$p}-rows.#{$p}-stretch>.#{$p} {
+  .#{$p}-col.#{$p}-vstretch>*,
+  .#{$p}-cols.#{$p}-vstretch>*,
+  .#{$p}-row.#{$p}-stretch>*,
+  .#{$p}-rows.#{$p}-stretch>* {
     flex: 1 0 auto;
   }
 
@@ -120,31 +120,17 @@
   // MARGIN PROPERTIES
   // spaces children a certain amount away from each other
   // TODO does not currently work with .#{$p}-rows or .#{$p}-cols
-  .#{$p}-vmargin-1>.#{$p} {
-    margin-top: $space-1;
+  @for $i from 1 through length($spaces) {
+    $space: nth($spaces, $i);
+    .#{$p}-vmargin-#{$i} > * {
+      margin-top: $space;
+    }
+    .#{$p}-margin-#{$i} > * {
+      margin-left: $space;
+    }
   }
-  .#{$p}-vmargin-2>.#{$p} {
-    margin-top: $space-2;
-  }
-  .#{$p}-vmargin-3>.#{$p} {
-    margin-top: $space-3;
-  }
-  .#{$p}-vmargin-4>.#{$p} {
-    margin-top: $space-4;
-  }
-  .#{$p}-margin-1>.#{$p} {
-    margin-left: $space-1;
-  }
-  .#{$p}-margin-2>.#{$p} {
-    margin-left: $space-2;
-  }
-  .#{$p}-margin-3>.#{$p} {
-    margin-left: $space-3;
-  }
-  .#{$p}-margin-4>.#{$p} {
-    margin-left: $space-4;
-  }
-  .#{$p}-row>.#{$p}:first-child, .#{$p}-col>.#{$p}:first-child {
+
+  .#{$p}-row>*:first-child, .#{$p}-col>*:first-child {
     margin-top: 0;
     margin-left: 0;
   }
