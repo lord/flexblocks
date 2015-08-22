@@ -1,0 +1,18 @@
+{
+  "name": "flexblocks",
+  "version": "0.1.0",
+  "description": "CSS layout library",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lord/flexblocks.git"
+  },
+  "author": "Robert Lord",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/lord/flexblocks/issues"
+  },
+  "homepage": "https://github.com/lord/flexblocks"
+}
