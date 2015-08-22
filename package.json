@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "scripts": {
-    "build": "node-sass src/ -o dist/ --source-map dist --output-style expanded"
+    "build": "node-sass src/ -o dist/ --source-map dist --output-style expanded",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
