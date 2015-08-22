@@ -5,6 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "scripts": {
+    "build": "node-sass src/ -o dist/ --source-map dist --output-style expanded"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/lord/flexblocks.git"
@@ -14,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/lord/flexblocks/issues"
   },
-  "homepage": "https://github.com/lord/flexblocks"
+  "homepage": "https://github.com/lord/flexblocks",
+  "devDependencies": {
+    "node-sass": "^3.2.0"
+  }
 }
