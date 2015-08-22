@@ -28,6 +28,3 @@ node_modules
 
 # sass
 .sass-cache
-
-# dist folder, for now? not sure if should keep, maybe add a pre-publish hook
-dist

@@ -1,0 +1,200 @@
+.bx-col, .bx-row, .bx-cols, .bx-rows {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.bx-col {
+  flex-direction: column;
+}
+
+.bx-row {
+  flex-direction: row;
+}
+
+.bx-cols {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.bx-rows {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bx-col.bx-top,
+.bx-cols.bx-top,
+.bx-row.bx-left,
+.bx-rows.bx-left {
+  justify-content: flex-start;
+}
+
+.bx-col.bx-bottom,
+.bx-cols.bx-bottom,
+.bx-row.bx-right,
+.bx-rows.bx-right {
+  justify-content: flex-end;
+}
+
+.bx-col.bx-middle,
+.bx-cols.bx-middle,
+.bx-row.bx-center,
+.bx-rows.bx-center {
+  justify-content: center;
+}
+
+.bx-col.bx-vstretch > *,
+.bx-cols.bx-vstretch > *,
+.bx-row.bx-stretch > *,
+.bx-rows.bx-stretch > * {
+  flex: 1 0 auto;
+}
+
+.bx-col.bx-vjustify,
+.bx-cols.bx-vjustify,
+.bx-row.bx-justify,
+.bx-rows.bx-justify {
+  justify-content: space-between;
+}
+
+.bx-col.bx-left,
+.bx-row.bx-top {
+  align-items: flex-start;
+}
+
+.bx-col.bx-right,
+.bx-row.bx-bottom {
+  align-items: flex-end;
+}
+
+.bx-col.bx-center,
+.bx-row.bx-middle {
+  align-items: center;
+}
+
+.bx-col.bx-stretch,
+.bx-row.bx-vstretch,
+.bx-col.bx-justify,
+.bx-row.bx-vjustify,
+.bx-cols,
+.bx-rows {
+  align-items: stretch;
+}
+
+.bx-cols.bx-left,
+.bx-rows.bx-top {
+  align-content: flex-start;
+}
+
+.bx-cols.bx-right,
+.bx-rows.bx-bottom {
+  align-content: flex-end;
+}
+
+.bx-cols.bx-center,
+.bx-rows.bx-middle {
+  align-content: center;
+}
+
+.bx-cols.bx-justify,
+.bx-rows.bx-vjustify {
+  align-content: space-between;
+}
+
+.bx-cols.bx-stretch,
+.bx-rows.bx-vstretch {
+  align-content: stretch;
+}
+
+.bx-vmargin-1 > * {
+  margin-top: 0.5rem;
+}
+
+.bx-margin-1 > * {
+  margin-left: 0.5rem;
+}
+
+.bx-vmargin-2 > * {
+  margin-top: 1rem;
+}
+
+.bx-margin-2 > * {
+  margin-left: 1rem;
+}
+
+.bx-vmargin-3 > * {
+  margin-top: 2rem;
+}
+
+.bx-margin-3 > * {
+  margin-left: 2rem;
+}
+
+.bx-vmargin-4 > * {
+  margin-top: 4rem;
+}
+
+.bx-margin-4 > * {
+  margin-left: 4rem;
+}
+
+.bx-row > *:first-child, .bx-col > *:first-child {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.bx-fill-1, .bx-fill {
+  flex: 1 0 0;
+}
+
+.bx-fill-2 {
+  flex: 2 0 0;
+}
+
+.bx-fill-3 {
+  flex: 3 0 0;
+}
+
+.bx-fill-4 {
+  flex: 4 0 0;
+}
+
+.bx-fill-5 {
+  flex: 5 0 0;
+}
+
+.bx-fill-6 {
+  flex: 6 0 0;
+}
+
+.bx-stretch-1, .bx-stretch {
+  flex: 1 0 auto;
+}
+
+.bx-stretch-2 {
+  flex: 2 0 auto;
+}
+
+.bx-stretch-3 {
+  flex: 3 0 auto;
+}
+
+.bx-stretch-4 {
+  flex: 4 0 auto;
+}
+
+.bx-stretch-5 {
+  flex: 5 0 auto;
+}
+
+.bx-stretch-6 {
+  flex: 6 0 auto;
+}
+
+.bx-page {
+  min-height: 100vh;
+}
+
+/*# sourceMappingURL=flexblocks.css.map */

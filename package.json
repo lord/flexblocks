@@ -3,11 +3,8 @@
   "version": "0.1.1",
   "description": "CSS layout library",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "scripts": {
     "build": "node-sass src/ -o dist/ --source-map dist --output-style expanded",
-    "prepublish": "npm run build"
+    "test": "npm run build && [[ $(git status dist --porcelain 2>/dev/null) == \"\" ]]"
   },
   "repository": {
     "type": "git",
