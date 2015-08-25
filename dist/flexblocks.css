@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+  position: relative;
 }
 
 .bx-col {
@@ -195,6 +196,34 @@
 
 .bx-page {
   min-height: 100vh;
+}
+
+.bx-pop-top, .bx-pop-bottom {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.bx-pop-bottom {
+  top: 100%;
+}
+
+.bx-pop-top {
+  bottom: 100%;
+}
+
+.bx-pop-left, .bx-pop-right {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.bx-pop-left {
+  right: 100%;
+}
+
+.bx-pop-right {
+  left: 100%;
 }
 
 /*# sourceMappingURL=flexblocks.css.map */
