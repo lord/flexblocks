@@ -157,15 +157,19 @@
     min-height: 100vh;
   }
 
-  .#{$p}-popover {
+  .#{$p}-pop-top, .#{$p}-pop-bottom {
     position: absolute;
-    top: 100%;
     left: 50%;
     transform: translate(-50%, 0);
   }
+  .#{$p}-pop-bottom { top: 100%; }
+  .#{$p}-pop-top { bottom: 100%; }
 
-  .#{$p}-popover>* {
-    position: relative;
-    left: -50%;
+  .#{$p}-pop-left, .#{$p}-pop-right {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
   }
+  .#{$p}-pop-left { right: 100%; }
+  .#{$p}-pop-right { left: 100%; }
 }
