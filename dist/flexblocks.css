@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+  position: relative;
 }
 
 .bx-col {
@@ -195,6 +196,17 @@
 
 .bx-page {
   min-height: 100vh;
+}
+
+.bx-popover {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+.bx-popover > * {
+  position: relative;
+  left: -50%;
 }
 
 /*# sourceMappingURL=flexblocks.css.map */

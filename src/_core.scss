@@ -7,6 +7,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
+    position: relative;
   }
 
   // TYPES
@@ -154,5 +155,16 @@
   // SPECIAL
   .#{$p}-page {
     min-height: 100vh;
+  }
+
+  .#{$p}-popover {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+  }
+
+  .#{$p}-popover>* {
+    position: relative;
+    left: -50%;
   }
 }

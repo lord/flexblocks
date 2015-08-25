@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+  position: relative;
 }
 
 .bx-col {
@@ -197,6 +198,17 @@
   min-height: 100vh;
 }
 
+.bx-popover {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+.bx-popover > * {
+  position: relative;
+  left: -50%;
+}
+
 @media only screen and (min-width: 768px) {
   .bigbx-col, .bigbx-row, .bigbx-cols, .bigbx-rows {
     display: flex;
@@ -204,6 +216,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
+    position: relative;
   }
   .bigbx-col {
     flex-direction: column;
@@ -355,6 +368,15 @@
   }
   .bigbx-page {
     min-height: 100vh;
+  }
+  .bigbx-popover {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+  }
+  .bigbx-popover > * {
+    position: relative;
+    left: -50%;
   }
 }
 
