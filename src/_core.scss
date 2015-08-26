@@ -3,11 +3,19 @@
   // Always use this
   .#{$p}-col, .#{$p}-row, .#{$p}-cols, .#{$p}-rows {
     display: flex;
-    margin: 0;
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
     position: relative;
+  }
+
+  // override space commands on different viewsizes
+  .#{$p}-col>* {
+    margin-left: 0;
+  }
+
+  .#{$p}-row>* {
+    margin-top: 0;
   }
 
   // TYPES
@@ -123,10 +131,10 @@
   // TODO does not currently work with .#{$p}-rows or .#{$p}-cols
   @for $i from 1 through length($spaces) {
     $space: nth($spaces, $i);
-    .#{$p}-vspaced-#{$i} > * {
+    .#{$p}-vspace-#{$i} > * {
       margin-top: $space;
     }
-    .#{$p}-spaced-#{$i} > * {
+    .#{$p}-space-#{$i} > * {
       margin-left: $space;
     }
   }
