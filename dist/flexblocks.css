@@ -194,10 +194,6 @@
   flex: 6 0 auto;
 }
 
-.bx-page {
-  min-height: 100vh;
-}
-
 .bx-pop-top, .bx-pop-bottom {
   position: absolute;
   left: 50%;
@@ -224,6 +220,10 @@
 
 .bx-pop-right {
   left: 100%;
+}
+
+.bx-page {
+  min-height: 100vh;
 }
 
 .bx-cover {

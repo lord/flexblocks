@@ -194,10 +194,6 @@
   flex: 6 0 auto;
 }
 
-.bx-page {
-  min-height: 100vh;
-}
-
 .bx-pop-top, .bx-pop-bottom {
   position: absolute;
   left: 50%;
@@ -224,6 +220,10 @@
 
 .bx-pop-right {
   left: 100%;
+}
+
+.bx-page {
+  min-height: 100vh;
 }
 
 .bx-cover {
@@ -391,9 +391,6 @@
   .bigbx-stretch-6 {
     flex: 6 0 auto;
   }
-  .bigbx-page {
-    min-height: 100vh;
-  }
   .bigbx-pop-top, .bigbx-pop-bottom {
     position: absolute;
     left: 50%;
@@ -415,6 +412,9 @@
   }
   .bigbx-pop-right {
     left: 100%;
+  }
+  .bigbx-page {
+    min-height: 100vh;
   }
   .bigbx-cover {
     position: absolute;

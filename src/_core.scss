@@ -152,11 +152,7 @@
   }
   .#{$p}-stretch { @extend .#{$p}-stretch-1; }
 
-  // SPECIAL
-  .#{$p}-page {
-    min-height: 100vh;
-  }
-
+  // POP classes for popovers
   .#{$p}-pop-top, .#{$p}-pop-bottom {
     position: absolute;
     left: 50%;
@@ -172,6 +168,11 @@
   }
   .#{$p}-pop-left { right: 100%; }
   .#{$p}-pop-right { left: 100%; }
+
+  // SPECIAL
+  .#{$p}-page {
+    min-height: 100vh;
+  }
 
   .#{$p}-cover {
     position: absolute;
