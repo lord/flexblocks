@@ -109,35 +109,35 @@
   align-content: stretch;
 }
 
-.bx-vmargin-1 > * {
+.bx-vspaced-1 > * {
   margin-top: 0.5rem;
 }
 
-.bx-margin-1 > * {
+.bx-spaced-1 > * {
   margin-left: 0.5rem;
 }
 
-.bx-vmargin-2 > * {
+.bx-vspaced-2 > * {
   margin-top: 1rem;
 }
 
-.bx-margin-2 > * {
+.bx-spaced-2 > * {
   margin-left: 1rem;
 }
 
-.bx-vmargin-3 > * {
+.bx-vspaced-3 > * {
   margin-top: 2rem;
 }
 
-.bx-margin-3 > * {
+.bx-spaced-3 > * {
   margin-left: 2rem;
 }
 
-.bx-vmargin-4 > * {
+.bx-vspaced-4 > * {
   margin-top: 4rem;
 }
 
-.bx-margin-4 > * {
+.bx-spaced-4 > * {
   margin-left: 4rem;
 }
 
@@ -224,6 +224,14 @@
 
 .bx-pop-right {
   left: 100%;
+}
+
+.bx-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=flexblocks.css.map */

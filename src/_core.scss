@@ -123,10 +123,10 @@
   // TODO does not currently work with .#{$p}-rows or .#{$p}-cols
   @for $i from 1 through length($spaces) {
     $space: nth($spaces, $i);
-    .#{$p}-vmargin-#{$i} > * {
+    .#{$p}-vspaced-#{$i} > * {
       margin-top: $space;
     }
-    .#{$p}-margin-#{$i} > * {
+    .#{$p}-spaced-#{$i} > * {
       margin-left: $space;
     }
   }
@@ -172,4 +172,12 @@
   }
   .#{$p}-pop-left { right: 100%; }
   .#{$p}-pop-right { left: 100%; }
+
+  .#{$p}-cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
