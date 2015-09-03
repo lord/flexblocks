@@ -84,10 +84,10 @@
   // spaces children a certain amount away from each other
   @for $i from 1 through length($spaces) {
     $space: nth($spaces, $i);
-    .#{$p}vspace-#{$i} > * {
+    .#{$p}col.#{$p}space-#{$i} > * {
       margin-top: $space;
     }
-    .#{$p}space-#{$i} > * {
+    .#{$p}row.#{$p}space-#{$i} > * {
       margin-left: $space;
     }
   }
