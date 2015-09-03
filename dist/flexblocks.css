@@ -69,35 +69,35 @@
   align-items: stretch;
 }
 
-.col.space-1 > * {
+.col.gap-1 > * {
   margin-top: 0.5rem;
 }
 
-.row.space-1 > * {
+.row.gap-1 > * {
   margin-left: 0.5rem;
 }
 
-.col.space-2 > * {
+.col.gap-2 > * {
   margin-top: 1rem;
 }
 
-.row.space-2 > * {
+.row.gap-2 > * {
   margin-left: 1rem;
 }
 
-.col.space-3 > * {
+.col.gap-3 > * {
   margin-top: 2rem;
 }
 
-.row.space-3 > * {
+.row.gap-3 > * {
   margin-left: 2rem;
 }
 
-.col.space-4 > * {
+.col.gap-4 > * {
   margin-top: 4rem;
 }
 
-.row.space-4 > * {
+.row.gap-4 > * {
   margin-left: 4rem;
 }
 
