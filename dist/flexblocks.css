@@ -1,4 +1,13 @@
-.col, .row {
+.col,
+.row,
+.top,
+.left,
+.bottom,
+.right,
+.center,
+.middle,
+.justify,
+.vjustify {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -22,42 +31,42 @@
   flex-direction: row;
 }
 
-.col.top,
+.top:not(.row),
 .row.left {
   justify-content: flex-start;
 }
 
-.col.bottom,
+.bottom:not(.row),
 .row.right {
   justify-content: flex-end;
 }
 
-.col.middle,
+.middle:not(.row),
 .row.center {
   justify-content: center;
 }
 
-.col.vjustify,
+.vjustify:not(.row),
 .row.justify {
   justify-content: space-between;
 }
 
-.col.left,
+.left:not(.row),
 .row.top {
   align-items: flex-start;
 }
 
-.col.right,
+.right:not(.row),
 .row.bottom {
   align-items: flex-end;
 }
 
-.col.center,
+.center:not(.row),
 .row.middle {
   align-items: center;
 }
 
-.col.justify,
+.justify:not(.row),
 .row.vjustify {
   align-items: stretch;
 }

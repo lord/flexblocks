@@ -1,7 +1,16 @@
 @mixin define-flexblocks($p, $spaces) {
   // CORE
   // Always use this
-  .#{$p}col, .#{$p}row {
+  .#{$p}col,
+  .#{$p}row,
+  .#{$p}top,
+  .#{$p}left,
+  .#{$p}bottom,
+  .#{$p}right,
+  .#{$p}center,
+  .#{$p}middle,
+  .#{$p}justify,
+  .#{$p}vjustify {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -28,42 +37,42 @@
   }
   // ALIGNMENT
   // Use at most one vertical and one horizontal
-  .#{$p}col.#{$p}top,
+  .#{$p}top:not(.#{$p}row),
   .#{$p}row.#{$p}left {
     justify-content: flex-start;
   }
 
-  .#{$p}col.#{$p}bottom,
+  .#{$p}bottom:not(.#{$p}row),
   .#{$p}row.#{$p}right {
     justify-content: flex-end;
   }
 
-  .#{$p}col.#{$p}middle,
+  .#{$p}middle:not(.#{$p}row),
   .#{$p}row.#{$p}center {
     justify-content: center;
   }
 
-  .#{$p}col.#{$p}vjustify,
+  .#{$p}vjustify:not(.#{$p}row),
   .#{$p}row.#{$p}justify {
     justify-content: space-between;
   }
 
-  .#{$p}col.#{$p}left,
+  .#{$p}left:not(.#{$p}row),
   .#{$p}row.#{$p}top {
     align-items: flex-start;
   }
 
-  .#{$p}col.#{$p}right,
+  .#{$p}right:not(.#{$p}row),
   .#{$p}row.#{$p}bottom {
     align-items: flex-end;
   }
 
-  .#{$p}col.#{$p}center,
+  .#{$p}center:not(.#{$p}row),
   .#{$p}row.#{$p}middle {
     align-items: center;
   }
 
-  .#{$p}col.#{$p}justify,
+  .#{$p}justify:not(.#{$p}row),
   .#{$p}row.#{$p}vjustify {
     align-items: stretch;
   }

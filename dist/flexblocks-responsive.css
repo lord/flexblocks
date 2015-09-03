@@ -1,4 +1,13 @@
-.col, .row {
+.col,
+.row,
+.top,
+.left,
+.bottom,
+.right,
+.center,
+.middle,
+.justify,
+.vjustify {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -22,42 +31,42 @@
   flex-direction: row;
 }
 
-.col.top,
+.top:not(.row),
 .row.left {
   justify-content: flex-start;
 }
 
-.col.bottom,
+.bottom:not(.row),
 .row.right {
   justify-content: flex-end;
 }
 
-.col.middle,
+.middle:not(.row),
 .row.center {
   justify-content: center;
 }
 
-.col.vjustify,
+.vjustify:not(.row),
 .row.justify {
   justify-content: space-between;
 }
 
-.col.left,
+.left:not(.row),
 .row.top {
   align-items: flex-start;
 }
 
-.col.right,
+.right:not(.row),
 .row.bottom {
   align-items: flex-end;
 }
 
-.col.center,
+.center:not(.row),
 .row.middle {
   align-items: center;
 }
 
-.col.justify,
+.justify:not(.row),
 .row.vjustify {
   align-items: stretch;
 }
@@ -164,7 +173,16 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .xl-col, .xl-row {
+  .xl-col,
+  .xl-row,
+  .xl-top,
+  .xl-left,
+  .xl-bottom,
+  .xl-right,
+  .xl-center,
+  .xl-middle,
+  .xl-justify,
+  .xl-vjustify {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -183,35 +201,35 @@
   .xl-row {
     flex-direction: row;
   }
-  .xl-col.xl-top,
+  .xl-top:not(.xl-row),
   .xl-row.xl-left {
     justify-content: flex-start;
   }
-  .xl-col.xl-bottom,
+  .xl-bottom:not(.xl-row),
   .xl-row.xl-right {
     justify-content: flex-end;
   }
-  .xl-col.xl-middle,
+  .xl-middle:not(.xl-row),
   .xl-row.xl-center {
     justify-content: center;
   }
-  .xl-col.xl-vjustify,
+  .xl-vjustify:not(.xl-row),
   .xl-row.xl-justify {
     justify-content: space-between;
   }
-  .xl-col.xl-left,
+  .xl-left:not(.xl-row),
   .xl-row.xl-top {
     align-items: flex-start;
   }
-  .xl-col.xl-right,
+  .xl-right:not(.xl-row),
   .xl-row.xl-bottom {
     align-items: flex-end;
   }
-  .xl-col.xl-center,
+  .xl-center:not(.xl-row),
   .xl-row.xl-middle {
     align-items: center;
   }
-  .xl-col.xl-justify,
+  .xl-justify:not(.xl-row),
   .xl-row.xl-vjustify {
     align-items: stretch;
   }
