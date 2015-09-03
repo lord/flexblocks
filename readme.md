@@ -21,3 +21,9 @@ TODO content
 ## Customizing Flexblocks
 
 TODO content
+
+## A Cheatsheet
+
+Click to enlarge.
+
+<img src="https://raw.githubusercontent.com/lord/img/master/cheatsheet-flexblocks.png" alt="Flexblocks: Layout System" width="400">
