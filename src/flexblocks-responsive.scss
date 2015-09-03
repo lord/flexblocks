@@ -1,6 +1,6 @@
 @import "core";
-@include define-flexblocks(bx-, 0.5rem 1rem 2rem 4rem);
+@include define-flexblocks("", 0.5rem 1rem 2rem 4rem);
 
 @media only screen and (min-width: 768px) {
-  @include define-flexblocks(bigbx-, 0.5rem 1rem 2rem 4rem);
+  @include define-flexblocks(xl-, 0.5rem 1rem 2rem 4rem);
 }
