@@ -1,8 +1,8 @@
 .col, .row {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
+  justify-content: flex-start;
+  align-items: flex-start;
   position: relative;
 }
 
@@ -37,11 +37,6 @@
   justify-content: center;
 }
 
-.col.vstretch > *,
-.row.stretch > * {
-  flex: 1 0 auto;
-}
-
 .col.vjustify,
 .row.justify {
   justify-content: space-between;
@@ -62,8 +57,6 @@
   align-items: center;
 }
 
-.col.stretch,
-.row.vstretch,
 .col.justify,
 .row.vjustify {
   align-items: stretch;
@@ -130,30 +123,6 @@
   flex: 6 0 0;
 }
 
-.stretch-1, .stretch {
-  flex: 1 0 auto;
-}
-
-.stretch-2 {
-  flex: 2 0 auto;
-}
-
-.stretch-3 {
-  flex: 3 0 auto;
-}
-
-.stretch-4 {
-  flex: 4 0 auto;
-}
-
-.stretch-5 {
-  flex: 5 0 auto;
-}
-
-.stretch-6 {
-  flex: 6 0 auto;
-}
-
 .pop-top, .pop-bottom {
   position: absolute;
   left: 50%;
@@ -198,8 +167,8 @@
   .xl-col, .xl-row {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: relative;
   }
   .xl-col > * {
@@ -226,10 +195,6 @@
   .xl-row.xl-center {
     justify-content: center;
   }
-  .xl-col.xl-vstretch > *,
-  .xl-row.xl-stretch > * {
-    flex: 1 0 auto;
-  }
   .xl-col.xl-vjustify,
   .xl-row.xl-justify {
     justify-content: space-between;
@@ -246,8 +211,6 @@
   .xl-row.xl-middle {
     align-items: center;
   }
-  .xl-col.xl-stretch,
-  .xl-row.xl-vstretch,
   .xl-col.xl-justify,
   .xl-row.xl-vjustify {
     align-items: stretch;
@@ -297,24 +260,6 @@
   }
   .xl-fill-6 {
     flex: 6 0 0;
-  }
-  .xl-stretch-1, .xl-stretch {
-    flex: 1 0 auto;
-  }
-  .xl-stretch-2 {
-    flex: 2 0 auto;
-  }
-  .xl-stretch-3 {
-    flex: 3 0 auto;
-  }
-  .xl-stretch-4 {
-    flex: 4 0 auto;
-  }
-  .xl-stretch-5 {
-    flex: 5 0 auto;
-  }
-  .xl-stretch-6 {
-    flex: 6 0 auto;
   }
   .xl-pop-top, .xl-pop-bottom {
     position: absolute;

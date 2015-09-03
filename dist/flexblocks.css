@@ -1,8 +1,8 @@
 .col, .row {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
+  justify-content: flex-start;
+  align-items: flex-start;
   position: relative;
 }
 
@@ -37,11 +37,6 @@
   justify-content: center;
 }
 
-.col.vstretch > *,
-.row.stretch > * {
-  flex: 1 0 auto;
-}
-
 .col.vjustify,
 .row.justify {
   justify-content: space-between;
@@ -62,8 +57,6 @@
   align-items: center;
 }
 
-.col.stretch,
-.row.vstretch,
 .col.justify,
 .row.vjustify {
   align-items: stretch;
@@ -128,30 +121,6 @@
 
 .fill-6 {
   flex: 6 0 0;
-}
-
-.stretch-1, .stretch {
-  flex: 1 0 auto;
-}
-
-.stretch-2 {
-  flex: 2 0 auto;
-}
-
-.stretch-3 {
-  flex: 3 0 auto;
-}
-
-.stretch-4 {
-  flex: 4 0 auto;
-}
-
-.stretch-5 {
-  flex: 5 0 auto;
-}
-
-.stretch-6 {
-  flex: 6 0 auto;
 }
 
 .pop-top, .pop-bottom {

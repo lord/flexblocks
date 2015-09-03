@@ -4,8 +4,8 @@
   .#{$p}col, .#{$p}row {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: relative;
   }
 
@@ -43,13 +43,6 @@
     justify-content: center;
   }
 
-  // This overrides the children values, so don't use if you want
-  // to specify specific values for the children.
-  .#{$p}col.#{$p}vstretch>*,
-  .#{$p}row.#{$p}stretch>* {
-    flex: 1 0 auto;
-  }
-
   .#{$p}col.#{$p}vjustify,
   .#{$p}row.#{$p}justify {
     justify-content: space-between;
@@ -70,11 +63,6 @@
     align-items: center;
   }
 
-  // spread and stretch do the same in the cross-axis
-  // for non grid elements. also in grids, children are always
-  // stretched
-  .#{$p}col.#{$p}stretch,
-  .#{$p}row.#{$p}vstretch,
   .#{$p}col.#{$p}justify,
   .#{$p}row.#{$p}vjustify {
     align-items: stretch;
@@ -104,14 +92,6 @@
     .#{$p}fill-#{$i} { flex: $i 0 0; }
   }
   .#{$p}fill { @extend .#{$p}fill-1; }
-
-  // stretch makes flexbox fill everything out normally, and then stretch
-  // these elements proportionally to fill the remaining space. This means two
-  // stretch-1s could have different widths. You probably want fill instead
-  @for $i from 1 through 6 {
-    .#{$p}stretch-#{$i} { flex: $i 0 auto; }
-  }
-  .#{$p}stretch { @extend .#{$p}stretch-1; }
 
   // POP classes for popovers
   .#{$p}pop-top, .#{$p}pop-bottom {
