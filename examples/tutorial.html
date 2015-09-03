@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Holy Grail Example Layout</title>
+  <link rel="stylesheet" href="../dist/flexblocks.css">
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+    }
+    .box {
+      padding: 2em;
+      border: 2px solid #000;
+    }
+    code {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="page col">
+    <div class="box">This</div>
+    <div class="box">is</div>
+    <div class="box">a</div>
+    <div class="box"><code>.col</code></div>
+    <div class="box">(scroll down for more)</div>
+  </div>
+
+  <div class="page row">
+    <div class="box">This</div>
+    <div class="box">is</div>
+    <div class="box">a</div>
+    <div class="box"><code>.row</code></div>
+  </div>
+
+  <div class="page row">
+    <div class="box">You</div>
+    <div class="box">can</div>
+    <div class="box col">
+      <div class="box">nest</div>
+      <div class="box">them</div>
+    </div>
+  </div>
+
+  <div class="page row middle right">
+    <div class="box">Align a <code>row</code> or <code>col</code>'s children</div>
+    <div class="box">vertically with <code>top</code>, <code>middle</code>, and <code>bottom</code></div>
+    <div class="box">and horizontally with <code>left</code>, <code>center</code>, and <code>right</code>.</div>
+  </div>
+
+  <div class="page row justify">
+    <div class="box"><code>justify</code></div>
+    <div class="box">aligns</div>
+    <div class="box">children</div>
+    <div class="box">apart</div>
+  </div>
+
+  <div class="page row stretch">
+    <div class="box">and <code>stretch</code></div>
+    <div class="box">stretches</div>
+    <div class="box">them</div>
+  </div>
+
+  <div class="page row stretch">
+    <div class="box">and <code>stretch</code></div>
+    <div class="box">stretches</div>
+    <div class="box">them</div>
+  </div>
+
+  <div class="page col">
+    <div class="row pad-1">
+      <div class="box"><code>pad-1</code></div>
+      <div class="box">spaces</div>
+      <div class="box">a</div>
+      <div class="box">little</div>
+    </div>
+
+    <div class="row pad-4">
+      <div class="box"><code>pad-4</code></div>
+      <div class="box">spaces</div>
+      <div class="box">a</div>
+      <div class="box">lot</div>
+    </div>
+  </div>
+
+  <div class="page row stretch pad-3">
+    <div class="box fill-1"><code>fill-1</code> through <code>fill-6</code> split up the parent into shares</div>
+    <div class="box fill-2">however, you're not locked on a 12 column grid</div>
+    <div class="box fill-3">just use as many columns as you'd like, and the browser automatically makes it fit properly. for instance, this uses 6 columns. you can also customize the gutter width with <code>pad</code> classes</div>
+  </div>
+
+  <div class="page xl-row xl-pad-3">
+    <div class="box">Want responsive code? </div>
+    <div class="box">Just use the <code>xl-</code> prefix on any Flexblocks class to make it</div>
+    <div class="box">desktop-only</div>
+  </div>
+
+  <div class="page middle center">
+    <div class="box">
+      That's pretty much it. Check out Flexblocks [on Github](https://github.com/lord/flexblocks)!
+    </div>
+  </div>
+</body>
+</html>
