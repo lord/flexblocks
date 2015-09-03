@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Holy Grail Example Layout</title>
-  <link rel="stylesheet" href="../dist/flexblocks.css">
+  <link rel="stylesheet" href="../dist/flexblocks-responsive.css">
   <style>
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -61,48 +61,42 @@
     <div class="box">them</div>
   </div>
 
-  <div class="page row stretch">
-    <div class="box">and <code>stretch</code></div>
-    <div class="box">stretches</div>
-    <div class="box">them</div>
-  </div>
-
-  <div class="page col">
-    <div class="row pad-1">
-      <div class="box"><code>pad-1</code></div>
+  <div class="page col top">
+    <div class="row gap-1 center">
+      <div class="box"><code>gap-1</code></div>
       <div class="box">spaces</div>
       <div class="box">a</div>
       <div class="box">little</div>
     </div>
 
-    <div class="row pad-4">
-      <div class="box"><code>pad-4</code></div>
+    <div class="row gap-4 center">
+      <div class="box"><code>gap-4</code></div>
       <div class="box">spaces</div>
       <div class="box">a</div>
       <div class="box">lot</div>
     </div>
   </div>
 
-  <div class="page row stretch pad-3">
+  <div class="page row gap-3">
     <div class="box fill-1"><code>fill-1</code> through <code>fill-6</code> split up the parent into shares</div>
     <div class="box fill-2">however, you're not locked on a 12 column grid</div>
-    <div class="box fill-3">just use as many columns as you'd like, and the browser automatically makes it fit properly. for instance, this uses 6 columns. you can also customize the gutter width with <code>pad</code> classes</div>
+    <div class="box fill-3">just use as many columns as you'd like, and the browser automatically makes it fit properly. for instance, this uses 6 columns. you can also customize the gutter width with <code>gap</code> classes</div>
   </div>
 
-  <div class="page xl-row xl-pad-3">
+  <div class="page xl-row xl-gap-3">
     <div class="box">Want responsive code? </div>
     <div class="box">Just use the <code>xl-</code> prefix on any Flexblocks class to make it</div>
     <div class="box">desktop-only</div>
   </div>
 
-  <div class="page middle center">
+  <div class="page col middle center">
     <div class="col box">
       You can hover an element outside of its parent with the <code>pop-left</code>, <code>pop-right</code>, <code>pop-top</code>, and <code>pop-bottom</code> classes.
       <div class="pop-right">this is a pop-right</div>
     </div>
   </div>
 
-  <div class="page middle center">
+  <div class="page col middle center">
     <div class="box">
       That's pretty much it. Check out Flexblocks [on Github](https://github.com/lord/flexblocks)!
     </div>
