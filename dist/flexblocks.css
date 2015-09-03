@@ -1,10 +1,17 @@
-.bx-col, .bx-row, .bx-cols, .bx-rows {
+.bx-col, .bx-row {
   display: flex;
-  margin: 0;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   position: relative;
+}
+
+.bx-col > * {
+  margin-left: 0;
+}
+
+.bx-row > * {
+  margin-top: 0;
 }
 
 .bx-col {
@@ -15,48 +22,28 @@
   flex-direction: row;
 }
 
-.bx-cols {
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.bx-rows {
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
 .bx-col.bx-top,
-.bx-cols.bx-top,
-.bx-row.bx-left,
-.bx-rows.bx-left {
+.bx-row.bx-left {
   justify-content: flex-start;
 }
 
 .bx-col.bx-bottom,
-.bx-cols.bx-bottom,
-.bx-row.bx-right,
-.bx-rows.bx-right {
+.bx-row.bx-right {
   justify-content: flex-end;
 }
 
 .bx-col.bx-middle,
-.bx-cols.bx-middle,
-.bx-row.bx-center,
-.bx-rows.bx-center {
+.bx-row.bx-center {
   justify-content: center;
 }
 
 .bx-col.bx-vstretch > *,
-.bx-cols.bx-vstretch > *,
-.bx-row.bx-stretch > *,
-.bx-rows.bx-stretch > * {
+.bx-row.bx-stretch > * {
   flex: 1 0 auto;
 }
 
 .bx-col.bx-vjustify,
-.bx-cols.bx-vjustify,
-.bx-row.bx-justify,
-.bx-rows.bx-justify {
+.bx-row.bx-justify {
   justify-content: space-between;
 }
 
@@ -78,66 +65,39 @@
 .bx-col.bx-stretch,
 .bx-row.bx-vstretch,
 .bx-col.bx-justify,
-.bx-row.bx-vjustify,
-.bx-cols,
-.bx-rows {
+.bx-row.bx-vjustify {
   align-items: stretch;
 }
 
-.bx-cols.bx-left,
-.bx-rows.bx-top {
-  align-content: flex-start;
-}
-
-.bx-cols.bx-right,
-.bx-rows.bx-bottom {
-  align-content: flex-end;
-}
-
-.bx-cols.bx-center,
-.bx-rows.bx-middle {
-  align-content: center;
-}
-
-.bx-cols.bx-justify,
-.bx-rows.bx-vjustify {
-  align-content: space-between;
-}
-
-.bx-cols.bx-stretch,
-.bx-rows.bx-vstretch {
-  align-content: stretch;
-}
-
-.bx-vspaced-1 > * {
+.bx-vspace-1 > * {
   margin-top: 0.5rem;
 }
 
-.bx-spaced-1 > * {
+.bx-space-1 > * {
   margin-left: 0.5rem;
 }
 
-.bx-vspaced-2 > * {
+.bx-vspace-2 > * {
   margin-top: 1rem;
 }
 
-.bx-spaced-2 > * {
+.bx-space-2 > * {
   margin-left: 1rem;
 }
 
-.bx-vspaced-3 > * {
+.bx-vspace-3 > * {
   margin-top: 2rem;
 }
 
-.bx-spaced-3 > * {
+.bx-space-3 > * {
   margin-left: 2rem;
 }
 
-.bx-vspaced-4 > * {
+.bx-vspace-4 > * {
   margin-top: 4rem;
 }
 
-.bx-spaced-4 > * {
+.bx-space-4 > * {
   margin-left: 4rem;
 }
 

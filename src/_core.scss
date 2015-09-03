@@ -1,7 +1,7 @@
 @mixin define-flexblocks($p, $spaces) {
   // CORE
   // Always use this
-  .#{$p}-col, .#{$p}-row, .#{$p}-cols, .#{$p}-rows {
+  .#{$p}-col, .#{$p}-row {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,51 +26,32 @@
   .#{$p}-row {
     flex-direction: row;
   }
-  .#{$p}-cols {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  .#{$p}-rows {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
   // ALIGNMENT
   // Use at most one vertical and one horizontal
   .#{$p}-col.#{$p}-top,
-  .#{$p}-cols.#{$p}-top,
-  .#{$p}-row.#{$p}-left,
-  .#{$p}-rows.#{$p}-left {
+  .#{$p}-row.#{$p}-left {
     justify-content: flex-start;
   }
 
   .#{$p}-col.#{$p}-bottom,
-  .#{$p}-cols.#{$p}-bottom,
-  .#{$p}-row.#{$p}-right,
-  .#{$p}-rows.#{$p}-right {
+  .#{$p}-row.#{$p}-right {
     justify-content: flex-end;
   }
 
   .#{$p}-col.#{$p}-middle,
-  .#{$p}-cols.#{$p}-middle,
-  .#{$p}-row.#{$p}-center,
-  .#{$p}-rows.#{$p}-center {
+  .#{$p}-row.#{$p}-center {
     justify-content: center;
   }
 
   // This overrides the children values, so don't use if you want
   // to specify specific values for the children.
   .#{$p}-col.#{$p}-vstretch>*,
-  .#{$p}-cols.#{$p}-vstretch>*,
-  .#{$p}-row.#{$p}-stretch>*,
-  .#{$p}-rows.#{$p}-stretch>* {
+  .#{$p}-row.#{$p}-stretch>* {
     flex: 1 0 auto;
   }
 
   .#{$p}-col.#{$p}-vjustify,
-  .#{$p}-cols.#{$p}-vjustify,
-  .#{$p}-row.#{$p}-justify,
-  .#{$p}-rows.#{$p}-justify {
+  .#{$p}-row.#{$p}-justify {
     justify-content: space-between;
   }
 
@@ -95,40 +76,12 @@
   .#{$p}-col.#{$p}-stretch,
   .#{$p}-row.#{$p}-vstretch,
   .#{$p}-col.#{$p}-justify,
-  .#{$p}-row.#{$p}-vjustify,
-  .#{$p}-cols,
-  .#{$p}-rows {
+  .#{$p}-row.#{$p}-vjustify {
     align-items: stretch;
-  }
-
-  .#{$p}-cols.#{$p}-left,
-  .#{$p}-rows.#{$p}-top {
-    align-content: flex-start;
-  }
-
-  .#{$p}-cols.#{$p}-right,
-  .#{$p}-rows.#{$p}-bottom {
-    align-content: flex-end;
-  }
-
-  .#{$p}-cols.#{$p}-center,
-  .#{$p}-rows.#{$p}-middle {
-    align-content: center;
-  }
-
-  .#{$p}-cols.#{$p}-justify,
-  .#{$p}-rows.#{$p}-vjustify {
-    align-content: space-between;
-  }
-
-  .#{$p}-cols.#{$p}-stretch,
-  .#{$p}-rows.#{$p}-vstretch {
-    align-content: stretch;
   }
 
   // MARGIN PROPERTIES
   // spaces children a certain amount away from each other
-  // TODO does not currently work with .#{$p}-rows or .#{$p}-cols
   @for $i from 1 through length($spaces) {
     $space: nth($spaces, $i);
     .#{$p}-vspace-#{$i} > * {
