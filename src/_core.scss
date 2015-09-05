@@ -19,11 +19,15 @@
   }
 
   // override space commands on different viewsizes
-  .#{$p}col>* {
+  // wondering why we have these classes listed twice?
+  // we want it to have a priority of two classes, so that
+  // it can override the gap styles at different viewsizes,
+  // which also use two classes.
+  .#{$p}col.#{$p}col>* {
     margin-left: 0;
   }
 
-  .#{$p}row>* {
+  .#{$p}row.#{$p}row>* {
     margin-top: 0;
   }
 
