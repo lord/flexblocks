@@ -15,11 +15,11 @@
   position: relative;
 }
 
-.col > * {
+.col.col > * {
   margin-left: 0;
 }
 
-.row > * {
+.row.row > * {
   margin-top: 0;
 }
 

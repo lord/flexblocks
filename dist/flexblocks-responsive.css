@@ -15,11 +15,11 @@
   position: relative;
 }
 
-.col > * {
+.col.col > * {
   margin-left: 0;
 }
 
-.row > * {
+.row.row > * {
   margin-top: 0;
 }
 
@@ -189,10 +189,10 @@
     align-items: flex-start;
     position: relative;
   }
-  .xl-col > * {
+  .xl-col.xl-col > * {
     margin-left: 0;
   }
-  .xl-row > * {
+  .xl-row.xl-row > * {
     margin-top: 0;
   }
   .xl-col {
