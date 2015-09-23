@@ -72,35 +72,43 @@
 }
 
 .col.gap-1 > * {
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
 }
 
 .row.gap-1 > * {
-  margin-left: 0.5rem;
+  margin-left: 0.4rem;
 }
 
 .col.gap-2 > * {
-  margin-top: 1rem;
+  margin-top: 0.66rem;
 }
 
 .row.gap-2 > * {
-  margin-left: 1rem;
+  margin-left: 0.66rem;
 }
 
 .col.gap-3 > * {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .row.gap-3 > * {
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .col.gap-4 > * {
-  margin-top: 4rem;
+  margin-top: 1.65rem;
 }
 
 .row.gap-4 > * {
-  margin-left: 4rem;
+  margin-left: 1.65rem;
+}
+
+.col.gap-5 > * {
+  margin-top: 2.72rem;
+}
+
+.row.gap-5 > * {
+  margin-left: 2.72rem;
 }
 
 .row > *:first-child, .col > *:first-child {
@@ -234,28 +242,34 @@
     align-items: stretch;
   }
   .xl-col.xl-gap-1 > * {
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
   }
   .xl-row.xl-gap-1 > * {
-    margin-left: 0.5rem;
+    margin-left: 0.4rem;
   }
   .xl-col.xl-gap-2 > * {
-    margin-top: 1rem;
+    margin-top: 0.66rem;
   }
   .xl-row.xl-gap-2 > * {
-    margin-left: 1rem;
+    margin-left: 0.66rem;
   }
   .xl-col.xl-gap-3 > * {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   .xl-row.xl-gap-3 > * {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
   .xl-col.xl-gap-4 > * {
-    margin-top: 4rem;
+    margin-top: 1.65rem;
   }
   .xl-row.xl-gap-4 > * {
-    margin-left: 4rem;
+    margin-left: 1.65rem;
+  }
+  .xl-col.xl-gap-5 > * {
+    margin-top: 2.72rem;
+  }
+  .xl-row.xl-gap-5 > * {
+    margin-left: 2.72rem;
   }
   .xl-row > *:first-child, .xl-col > *:first-child {
     margin-top: 0;
