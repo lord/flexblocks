@@ -2,5 +2,5 @@
 @include define-flexblocks("", 0.4rem 0.66rem 1rem 1.65rem 2.72rem);
 
 @media only screen and (min-width: 768px) {
-  @include define-flexblocks(xl-, 0.4rem 0.66rem 1rem 1.65rem 2.72rem);
+  @include define-flexblocks(x, 0.4rem 0.66rem 1rem 1.65rem 2.72rem);
 }

@@ -193,153 +193,153 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .xl-col,
-  .xl-row,
-  .xl-top,
-  .xl-left,
-  .xl-bottom,
-  .xl-right,
-  .xl-center,
-  .xl-middle,
-  .xl-justify,
-  .xl-vjustify {
+  .xcol,
+  .xrow,
+  .xtop,
+  .xleft,
+  .xbottom,
+  .xright,
+  .xcenter,
+  .xmiddle,
+  .xjustify,
+  .xvjustify {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     position: relative;
   }
-  .xl-col.xl-col > * {
+  .xcol.xcol > * {
     margin-left: 0;
   }
-  .xl-row.xl-row > * {
+  .xrow.xrow > * {
     margin-top: 0;
   }
-  .xl-col {
+  .xcol {
     flex-direction: column;
   }
-  .xl-row {
+  .xrow {
     flex-direction: row;
   }
-  .xl-left {
+  .xleft {
     text-align: left;
   }
-  .xl-center {
+  .xcenter {
     text-align: center;
   }
-  .xl-right {
+  .xright {
     text-align: right;
   }
-  .xl-top:not(.xl-row),
-  .xl-row.xl-left {
+  .xtop:not(.xrow),
+  .xrow.xleft {
     justify-content: flex-start;
   }
-  .xl-bottom:not(.xl-row),
-  .xl-row.xl-right {
+  .xbottom:not(.xrow),
+  .xrow.xright {
     justify-content: flex-end;
   }
-  .xl-middle:not(.xl-row),
-  .xl-row.xl-center {
+  .xmiddle:not(.xrow),
+  .xrow.xcenter {
     justify-content: center;
   }
-  .xl-vjustify:not(.xl-row),
-  .xl-row.xl-justify {
+  .xvjustify:not(.xrow),
+  .xrow.xjustify {
     justify-content: space-between;
   }
-  .xl-left:not(.xl-row),
-  .xl-row.xl-top {
+  .xleft:not(.xrow),
+  .xrow.xtop {
     align-items: flex-start;
   }
-  .xl-right:not(.xl-row),
-  .xl-row.xl-bottom {
+  .xright:not(.xrow),
+  .xrow.xbottom {
     align-items: flex-end;
   }
-  .xl-center:not(.xl-row),
-  .xl-row.xl-middle {
+  .xcenter:not(.xrow),
+  .xrow.xmiddle {
     align-items: center;
   }
-  .xl-justify:not(.xl-row),
-  .xl-row.xl-vjustify {
+  .xjustify:not(.xrow),
+  .xrow.xvjustify {
     align-items: stretch;
   }
-  .xl-col.xl-gap-1 > * {
+  .xcol.xgap-1 > * {
     margin-top: 0.4rem;
   }
-  .xl-row.xl-gap-1 > * {
+  .xrow.xgap-1 > * {
     margin-left: 0.4rem;
   }
-  .xl-col.xl-gap-2 > * {
+  .xcol.xgap-2 > * {
     margin-top: 0.66rem;
   }
-  .xl-row.xl-gap-2 > * {
+  .xrow.xgap-2 > * {
     margin-left: 0.66rem;
   }
-  .xl-col.xl-gap-3 > * {
+  .xcol.xgap-3 > * {
     margin-top: 1rem;
   }
-  .xl-row.xl-gap-3 > * {
+  .xrow.xgap-3 > * {
     margin-left: 1rem;
   }
-  .xl-col.xl-gap-4 > * {
+  .xcol.xgap-4 > * {
     margin-top: 1.65rem;
   }
-  .xl-row.xl-gap-4 > * {
+  .xrow.xgap-4 > * {
     margin-left: 1.65rem;
   }
-  .xl-col.xl-gap-5 > * {
+  .xcol.xgap-5 > * {
     margin-top: 2.72rem;
   }
-  .xl-row.xl-gap-5 > * {
+  .xrow.xgap-5 > * {
     margin-left: 2.72rem;
   }
-  .xl-row > *:first-child, .xl-col > *:first-child {
+  .xrow > *:first-child, .xcol > *:first-child {
     margin-top: 0;
     margin-left: 0;
   }
-  .xl-fill-1, .xl-fill {
+  .xfill-1, .xfill {
     flex: 1 0 0;
   }
-  .xl-fill-2 {
+  .xfill-2 {
     flex: 2 0 0;
   }
-  .xl-fill-3 {
+  .xfill-3 {
     flex: 3 0 0;
   }
-  .xl-fill-4 {
+  .xfill-4 {
     flex: 4 0 0;
   }
-  .xl-fill-5 {
+  .xfill-5 {
     flex: 5 0 0;
   }
-  .xl-fill-6 {
+  .xfill-6 {
     flex: 6 0 0;
   }
-  .xl-pop-top, .xl-pop-bottom {
+  .xpop-top, .xpop-bottom {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
   }
-  .xl-pop-bottom {
+  .xpop-bottom {
     top: 100%;
   }
-  .xl-pop-top {
+  .xpop-top {
     bottom: 100%;
   }
-  .xl-pop-left, .xl-pop-right {
+  .xpop-left, .xpop-right {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
   }
-  .xl-pop-left {
+  .xpop-left {
     right: 100%;
   }
-  .xl-pop-right {
+  .xpop-right {
     left: 100%;
   }
-  .xl-page {
+  .xpage {
     min-height: 100vh;
   }
-  .xl-cover {
+  .xcover {
     position: absolute;
     top: 0;
     bottom: 0;
