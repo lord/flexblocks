@@ -31,6 +31,18 @@
   flex-direction: row;
 }
 
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
 .top:not(.row),
 .row.left {
   justify-content: flex-start;
@@ -208,6 +220,15 @@
   }
   .xl-row {
     flex-direction: row;
+  }
+  .xl-left {
+    text-align: left;
+  }
+  .xl-center {
+    text-align: center;
+  }
+  .xl-right {
+    text-align: right;
   }
   .xl-top:not(.xl-row),
   .xl-row.xl-left {

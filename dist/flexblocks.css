@@ -31,6 +31,18 @@
   flex-direction: row;
 }
 
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
 .top:not(.row),
 .row.left {
   justify-content: flex-start;
