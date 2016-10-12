@@ -1,6 +1,6 @@
 {
   "name": "flexblocks",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "CSS layout library",
   "scripts": {
     "build": "node-sass src/ -o dist/ --source-map dist --output-style expanded",
@@ -12,7 +12,7 @@
     "url": "https://github.com/lord/flexblocks.git"
   },
   "author": "Robert Lord",
-  "license": "none",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lord/flexblocks/issues"
   },
