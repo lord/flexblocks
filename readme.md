@@ -7,7 +7,7 @@
   <br>
 </p>
 
-Flexblocks is a lightweight, easy-to-learn CSS layout system, designed to free the two biggest pain points of new CSS users: alignment syntax and margin edgecases. For a detailed explanation of how Flexblocks is different, check out the [announcement blog post](https://lord.io/blog/2016/flexblocks/).
+Flexblocks is a lightweight, easy-to-learn CSS layout system, designed to fix the two biggest pain points of new CSS users: alignment syntax and margin edgecases. For a detailed explanation of how Flexblocks is different, check out the [announcement blog post](https://lord.io/blog/2016/flexblocks/).
 
 ## Installing Flexblocks
 
