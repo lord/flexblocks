@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "CSS layout library",
   "scripts": {
-    "build": "node-sass src/ -o dist/dev/ --source-map dist/dev/ --output-style expanded && node-sass src/ -o dist/prod/ --output-style compressed",
-    "watch": "node-sass --watch src/ -o dist/ --source-map dist --output-style expanded",
+    "build": "node-sass src/ -o dist/dev/ --source-map-embed --output-style expanded && node-sass src/ -o dist/prod/ --output-style compressed",
+    "watch": "node-sass --watch src/ -o dist/dev/ --source-map-embed --output-style expanded",
     "test": "npm run build && bash -c '[[ $(git status ./dist --porcelain 2>/dev/null) == \"\" ]]'"
   },
   "repository": {
