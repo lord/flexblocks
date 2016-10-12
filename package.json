@@ -1,6 +1,6 @@
 {
   "name": "flexblocks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CSS layout library",
   "scripts": {
     "build": "node-sass src/ -o dist/dev/ --source-map-embed --output-style expanded && node-sass src/ -o dist/prod/ --output-style compressed",
