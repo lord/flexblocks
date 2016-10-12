@@ -22,3 +22,7 @@ Using Flexblocks is easy! Here's a guide, click to enlarge.
 ## Customizing Flexblocks
 
 If you change the contents of `flexblocks-responsive.scss`, you can update the default widths of the `gap` classes, and add an optional prefix to all class names. To recompile the SCSS into CSS, you can run `npm install; npm run build`.
+
+## Getting Help
+
+I'm available [on Twitter](http://twitter.com/rl0rd) and am more than happy to answer any questions/concerns/thoughts. If you're having issues or aren't sure how to do something, feel free to let me know.
